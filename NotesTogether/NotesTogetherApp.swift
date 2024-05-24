@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct NotesTogetherApp: App {
+    @State var dataStore = DataStore()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(dataStore)
         }
     }
 }
